@@ -3,6 +3,9 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  safelist: [
+    { pattern: /(bg|text|ring|border)-stage-(lead|qualified|proposal|negotiation|won|lost)(\/\d+)?/ },
+  ],
   prefix: "",
   theme: {
     container: {
