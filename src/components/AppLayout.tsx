@@ -1,6 +1,11 @@
+import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { Building2, Contact2, KanbanSquare, LayoutDashboard, Bell } from "lucide-react";
+import {
+  Activity, Bell, Building2, CheckSquare, Contact2, KanbanSquare,
+  LayoutDashboard, Paperclip, Settings, StickyNote,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+import { loadSettings, type AppSettings } from "@/lib/settings";
 
 const nav = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
@@ -8,6 +13,17 @@ const nav = [
   { to: "/contacts", label: "Contacts", icon: Contact2 },
   { to: "/companies", label: "Companies", icon: Building2 },
   { to: "/reminders", label: "Reminders", icon: Bell },
+];
+
+const workspace = [
+  { to: "/notes", label: "Notes", icon: StickyNote },
+  { to: "/tasks", label: "Tasks", icon: CheckSquare },
+  { to: "/activities", label: "Activity", icon: Activity },
+  { to: "/attachments", label: "Attachments", icon: Paperclip },
+];
+
+const system = [
+  { to: "/settings", label: "Settings", icon: Settings },
 ];
 
 export default function AppLayout() {
