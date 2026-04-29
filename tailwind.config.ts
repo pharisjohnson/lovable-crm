@@ -3,6 +3,9 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  safelist: [
+    { pattern: /(bg|text|ring|border)-stage-(lead|qualified|proposal|negotiation|won|lost)(\/\d+)?/ },
+  ],
   prefix: "",
   theme: {
     container: {
@@ -57,6 +60,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        stage: {
+          lead: "hsl(var(--stage-lead))",
+          qualified: "hsl(var(--stage-qualified))",
+          proposal: "hsl(var(--stage-proposal))",
+          negotiation: "hsl(var(--stage-negotiation))",
+          won: "hsl(var(--stage-won))",
+          lost: "hsl(var(--stage-lost))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        elegant: "var(--shadow-elegant)",
       },
       borderRadius: {
         lg: "var(--radius)",
