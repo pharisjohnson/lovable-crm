@@ -57,6 +57,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        stage: {
+          lead: "hsl(var(--stage-lead))",
+          qualified: "hsl(var(--stage-qualified))",
+          proposal: "hsl(var(--stage-proposal))",
+          negotiation: "hsl(var(--stage-negotiation))",
+          won: "hsl(var(--stage-won))",
+          lost: "hsl(var(--stage-lost))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        elegant: "var(--shadow-elegant)",
       },
       borderRadius: {
         lg: "var(--radius)",
