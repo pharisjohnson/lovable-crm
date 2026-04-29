@@ -10,6 +10,11 @@ import Companies from "./pages/Companies";
 import Pipeline from "./pages/Pipeline";
 import DealDetail from "./pages/DealDetail";
 import Reminders from "./pages/Reminders";
+import Notes from "./pages/Notes";
+import Tasks from "./pages/Tasks";
+import Activities from "./pages/Activities";
+import Attachments from "./pages/Attachments";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +33,11 @@ const App = () => (
             <Route path="/pipeline" element={<Pipeline />} />
             <Route path="/deals/:id" element={<DealDetail />} />
             <Route path="/reminders" element={<Reminders />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/tasks" element={<Tasks />} />
+            <Route path="/activities" element={<Activities />} />
+            <Route path="/attachments" element={<Attachments />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

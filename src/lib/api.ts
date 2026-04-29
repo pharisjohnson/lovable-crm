@@ -143,6 +143,33 @@ export const listActivities = async (dealId: string) =>
       .order("created_at", { ascending: false })
   );
 
+export const listAllActivities = async () =>
+  unwrap<Activity[]>(
+    await insforge.database
+      .from("activities")
+      .select("*")
+      .order("created_at", { ascending: false })
+  );
+
+export const listAllNotes = async () =>
+  unwrap<Note[]>(
+    await insforge.database
+      .from("notes")
+      .select("*")
+      .order("created_at", { ascending: false })
+  );
+
+export const deleteNote = async (id: string) =>
+  unwrap(await insforge.database.from("notes").delete().eq("id", id));
+
+export const listAllAttachments = async () =>
+  unwrap<Attachment[]>(
+    await insforge.database
+      .from("attachments")
+      .select("*")
+      .order("created_at", { ascending: false })
+  );
+
 export const logActivity = async (
   dealId: string,
   type: Activity["type"],
